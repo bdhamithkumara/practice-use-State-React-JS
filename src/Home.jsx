@@ -4,9 +4,12 @@ const Home = () => {
 
     const [count , setCount] = React.useState(0);
 
+    const [btnname , setBtnname] = React.useState("Click on me!")
+
     const addCountTo = () => {
        let newCount = count + 1;
        setCount(newCount);
+       setBtnname("Add to Count");
     };
 
   return (
@@ -20,7 +23,9 @@ const Home = () => {
 
             <p>I've been clicked <span>{count}</span> time(s)!</p>
 
-        <button onClick={addCountTo} style={{padding:"20px",marginTop:"30px",fontSize:"20px"}}>Add to count</button>
+        <button onClick={addCountTo} style={{padding:"20px",marginTop:"30px",fontSize:"20px"}}>
+            {btnname}
+        </button>
     </div>
   )
 }
